@@ -1,29 +1,22 @@
-// Seu código vai aqui
-
 function snapCrackle(maxValue){
-    let array = []
+    let texto = '';
+    
+    for(let i = 1; i <= maxValue; i++){
+        if(i % 2 !== 0 && i % 5 === 0){
+            texto+='SnapCrackle,' + ' ';
+         }else if(i % 2 !== 0){
+            texto +='Snap,' + ' ';
+         }else if(i % 5 === 0){
+             texto +='Crackle,'+ ' ';
+         }else{
+             texto += i + ', ';
+         }
 
-    for(let contador = 1; contador <= maxValue;contador++){
-        let num = ""
-        if(contador % 2 !== 0){
-            num += "Snap"
-            
-        }
-        if(contador % 5 === 0){
-            num += "Crackle"
-            
-        }
-        if(contador % 2 !== 0 && contador % 5 === 0){
-            num += ""
-            
-            
-        }
-        if(contador % 2 === 0 && contador % 5 !== 0){
-            num = contador
-            
-        }
-        array.push(num)
+
+        
+          
     }
-    return array
+        return texto;
 }
-console.log(snapCrackle(15).join())
+
+console.log(snapCrackle(15));
